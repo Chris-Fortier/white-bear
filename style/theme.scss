@@ -1,4 +1,29 @@
-$enable-rounded: false !default;
+$spacer: 1rem;
+$spacers: (); // creates a list/array
+$spacers: map-merge(
+   (
+      0: 0,
+      1: (
+         $spacer * 0.25,
+      ),
+      2: (
+         $spacer * 0.5,
+      ),
+      3: (
+         $spacer * 0.75,
+      ),
+      4: $spacer,
+      5: (
+         $spacer * 1.5,
+      ),
+      56: (
+         $spacer * 3,
+      ),
+   ),
+   $spacers
+);
+
+$enable-rounded: false;
 $blue: skyblue;
 
 button.btn {
