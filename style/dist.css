@@ -11398,4 +11398,8 @@ h3 {
   background-repeat: no-repeat;
 }
 
+.cardNum {
+  text-align: right;
+}
+
 /*# sourceMappingURL=dist.css.map */
