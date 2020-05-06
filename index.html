@@ -44,19 +44,30 @@
                <div class="card">
                   <h2 class="card-title">Welcome back</h2>
                   <p>Log in with your email address and password.</p>
-                  <h3>Email address</h3>
-                  <input class="form-control" />
-                  <h3>Password</h3>
-                  <input />
 
-                  <!-- putting this in a div makes the float-right class work -->
-                  <div>
+                  <form>
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input
+                           type="email"
+                           class="form-control"
+                           id="exampleInputEmail1"
+                        />
+                     </div>
+                     <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input
+                           type="password"
+                           class="form-control"
+                           id="exampleInputPassword1"
+                        />
+                     </div>
                      <a
                         href="show-answer.html"
                         class="btn btn-success float-right"
                         >Log in</a
                      >
-                  </div>
+                  </form>
                </div>
             </div>
             <!-- </div> -->
