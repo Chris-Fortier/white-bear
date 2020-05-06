@@ -97,7 +97,7 @@ $spacers: ();
 $spacers: map-merge(
    (
       0: 0,
-      1: 4,
+      1: 4px,
       2: 8,
       3: 12,
       4: $spacer,
@@ -194,3 +194,23 @@ $input-padding-x-sm: $input-btn-padding-x-sm;
 
 $input-padding-y-lg: $input-btn-padding-y-lg;
 $input-padding-x-lg: $input-btn-padding-x-lg;
+
+// Input border-radius
+$btn-border-radius: $border-radius;
+// $btn-border-radius-lg: $border-radius-lg;
+// $btn-border-radius-sm: $border-radius-sm;
+
+// $border-radius: 0.25rem;
+// $border-radius: 4px;
+// $border-radius: map-get($spacers, 1);
+
+// $border-radius-lg: 0.3rem;
+// $border-radius-sm: 0.2rem;
+$input-border-radius: $border-radius;
+
+// $border-width: 2px;
+// $border-color: $gray-600;
+$input-btn-border-width: $border-width;
+// changes the border color
+$input-border-color: $secondary;
+$input-border-width: $input-btn-border-width;
