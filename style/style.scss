@@ -53,7 +53,7 @@
 
 .landing-page {
    // cjf
-   background-color: black;
+   // background-color: black;
    // background-image: url("images/background-landing.jpg");
    // padding-top: 54px; // padding on top of landing page above logo and title need to use $spacers
 
@@ -73,4 +73,17 @@
          8
       ); // adds space between the cards when displayed vertically with small screen sizes
    }
+
+   // background-image: url("images/background-landing.jpg");
+   // // height: 1080px;
+   // background-size: 100% 100%;
+   // background-repeat: no-repeat;
+   // background-attachment: fixed;
+}
+
+.background-image {
+   background-image: url("/images/background-landing.jpg"); // need / before folder name in this path
+   background-position-x: center; // keeps image centered, does not stretch it
+   background-position-y: center;
+   background-repeat: no-repeat;
 }

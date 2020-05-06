@@ -11381,9 +11381,6 @@ h3 {
   font-weight: normal;
 }
 
-.landing-page {
-  background-color: black;
-}
 .landing-page h1 {
   color: #ffffff;
   vertical-align: middle;
@@ -11392,6 +11389,13 @@ h3 {
 .landing-page .card {
   padding: 1rem;
   margin-bottom: 64;
+}
+
+.background-image {
+  background-image: url("/images/background-landing.jpg");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=dist.css.map */
