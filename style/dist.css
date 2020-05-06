@@ -11375,4 +11375,23 @@ h3 {
   font-weight: 400;
 }
 
+.card-title {
+  font-family: "Noto Serif", serif;
+  font-size: 27px;
+  font-weight: normal;
+}
+
+.landing-page {
+  background-color: black;
+}
+.landing-page h1 {
+  color: #ffffff;
+  vertical-align: middle;
+  padding-left: 32;
+}
+.landing-page .card {
+  padding: 1rem;
+  margin-bottom: 64;
+}
+
 /*# sourceMappingURL=dist.css.map */

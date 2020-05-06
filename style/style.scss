@@ -38,6 +38,39 @@
 } // broken
 
 .btn-navigation {
+   // cjf
    // makes the nav buttons not bold
    font-weight: $font-weight-normal;
+}
+
+.card-title {
+   // cjf style for the card titles on the landing page
+   // should I make a class here or just use h2
+   font-family: $font-family-serif;
+   font-size: 27px; // this is not a spacer size, so just put value here?
+   font-weight: normal; // looks too thick
+}
+
+.landing-page {
+   // cjf
+   background-color: black;
+   // background-image: url("images/background-landing.jpg");
+   // padding-top: 54px; // padding on top of landing page above logo and title need to use $spacers
+
+   h1 {
+      color: $white;
+      vertical-align: middle;
+      padding-left: map-get(
+         $spacers,
+         6
+      ); // somewhere between 6 and 7 matches the screenshot
+   }
+
+   .card {
+      padding: map-get($spacers, 4); // padding for cards on title page
+      margin-bottom: map-get(
+         $spacers,
+         8
+      ); // adds space between the cards when displayed vertically with small screen sizes
+   }
 }
