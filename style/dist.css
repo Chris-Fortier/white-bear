@@ -11361,6 +11361,10 @@ h3 {
   font-size: 1.25rem;
 }
 
+.card-body.allcards {
+  font-size: 1rem;
+}
+
 .card.bg-primary {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -11396,10 +11400,6 @@ h3 {
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
-}
-
-.cardNum {
-  text-align: right;
 }
 
 /*# sourceMappingURL=dist.css.map */

@@ -27,6 +27,11 @@
    font-size: $font-size-base * 1.25;
 }
 
+.card-body.allcards {
+   // cjf make smaller text for the all-cards view
+   font-size: $font-size-base;
+}
+
 .card.bg-primary {
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 0;
