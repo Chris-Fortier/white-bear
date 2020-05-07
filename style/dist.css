@@ -2131,7 +2131,7 @@ textarea.form-control {
   margin-left: -1.25rem;
 }
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
-  color: #6c757d;
+  color: #80818d;
 }
 
 .form-check-label {
@@ -11198,7 +11198,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #80818d !important;
 }
 
 .text-black-50 {
@@ -11400,6 +11400,11 @@ h3 {
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
+}
+
+h4 {
+  text-align: center;
+  color: #80818d;
 }
 
 /*# sourceMappingURL=dist.css.map */
