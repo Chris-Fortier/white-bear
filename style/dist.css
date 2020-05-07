@@ -2046,14 +2046,14 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 .col-form-label-sm {
   padding-top: 6px;
   padding-bottom: 6px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -2077,7 +2077,7 @@ select.form-control:focus::-ms-value {
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
   padding: 4px 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -2085,7 +2085,7 @@ select.form-control:focus::-ms-value {
 .form-control-lg {
   height: calc(1.5em + 1rem + 2px);
   padding: 8 32;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -2889,14 +2889,14 @@ fieldset:disabled a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 8 32;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 4px 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -3405,7 +3405,7 @@ input[type=button].btn-block {
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
   padding: 8 32;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -3422,7 +3422,7 @@ input[type=button].btn-block {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
   padding: 4px 1rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }

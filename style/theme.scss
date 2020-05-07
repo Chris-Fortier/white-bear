@@ -164,23 +164,35 @@ $border-radius-sm: $border-radius;
 
 $input-btn-padding-y: map-get($spacers, 2);
 $input-btn-padding-x: map-get($spacers, 4);
+$input-btn-font-size: $font-size-base;
+$input-btn-line-height: $line-height-base;
 
 $input-btn-padding-y-sm: map-get($spacers, 1);
 $input-btn-padding-x-sm: map-get($spacers, 4);
+$input-btn-font-size-sm: $font-size-base;
+$input-btn-line-height-sm: $line-height-base;
 
 $input-btn-padding-y-lg: map-get($spacers, 2);
 $input-btn-padding-x-lg: map-get($spacers, 6);
+$input-btn-font-size-lg: $font-size-base;
+$input-btn-line-height-lg: $line-height-base;
 
 // Buttons
 
 $btn-padding-y: $input-btn-padding-y;
 $btn-padding-x: $input-btn-padding-x;
+$btn-font-size: $font-size-base;
+$btn-line-height: $line-height-base;
 
 $btn-padding-y-sm: $input-btn-padding-y-sm;
 $btn-padding-x-sm: $input-btn-padding-x-sm;
+$btn-font-size-sm: $font-size-base;
+$btn-line-height-sm: $line-height-base;
 
 $btn-padding-y-lg: $input-btn-padding-y-lg;
 $btn-padding-x-lg: $input-btn-padding-x-lg;
+$btn-font-size-lg: $font-size-base;
+$btn-line-height-lg: $line-height-base;
 
 $btn-font-weight: $font-weight-bold;
 
@@ -188,12 +200,18 @@ $btn-font-weight: $font-weight-bold;
 
 $input-padding-y: $input-btn-padding-y;
 $input-padding-x: $input-btn-padding-x;
+$input-font-size: $font-size-base;
+$input-line-height: $line-height-base;
 
 $input-padding-y-sm: $input-btn-padding-y-sm;
 $input-padding-x-sm: $input-btn-padding-x-sm;
+$input-font-size-sm: $font-size-base;
+$input-line-height-sm: $line-height-base;
 
 $input-padding-y-lg: $input-btn-padding-y-lg;
 $input-padding-x-lg: $input-btn-padding-x-lg;
+$input-font-size-lg: $font-size-base;
+$input-line-height-lg: $line-height-base;
 
 // Input border-radius
 $btn-border-radius: $border-radius;
