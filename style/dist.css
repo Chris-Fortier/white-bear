@@ -11407,4 +11407,18 @@ h4 {
   color: #80818d;
 }
 
+.card textarea {
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  padding: 0px;
+  width: 100%;
+}
+
 /*# sourceMappingURL=dist.css.map */
