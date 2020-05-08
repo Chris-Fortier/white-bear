@@ -11395,10 +11395,13 @@ h3 {
   margin-bottom: 64;
 }
 .landing-page label {
-  color: #80818d;
   font-size: 1.25rem;
   margin-top: 8;
   margin-bottom: 4px;
+}
+
+label {
+  color: #80818d;
 }
 
 .background-image {
@@ -11437,6 +11440,11 @@ h4 {
 th {
   color: #80818d;
   font-weight: 400;
+}
+
+.form-control,
+.dropdown-toggle {
+  border-color: #80818d;
 }
 
 /*# sourceMappingURL=dist.css.map */

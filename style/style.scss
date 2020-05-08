@@ -79,11 +79,15 @@
 
    label {
       // labels on the forms on the landing page
-      color: $text-muted;
       font-size: $font-size-base * 1.25;
       margin-top: map-get($spacers, 2);
       margin-bottom: map-get($spacers, 1);
    }
+}
+
+label {
+   // add labels have muted text
+   color: $text-muted;
 }
 
 .background-image {
@@ -128,4 +132,10 @@ th {
    // makes the table row titles normal muted instead of bold
    color: $text-muted;
    font-weight: $font-weight-normal;
+}
+
+.form-control,
+.dropdown-toggle {
+   // sets the border color of these things to a medium gray
+   border-color: $gray-400;
 }
