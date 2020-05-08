@@ -116,3 +116,8 @@ h4 {
    width: 100%;
    // height: 214px;
 }
+
+.bg-success,
+.bg-danger p.lead {
+   color: $white;
+}
