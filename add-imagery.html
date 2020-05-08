@@ -17,6 +17,17 @@
          />
          <p class="lead">Card created!</p>
       </div>
+      <div
+         class="bg-danger w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-error"
+      >
+         <img
+            src="/icons/error.svg"
+            width="24px"
+            style="margin-bottom: 3px; margin-right: 8px;"
+         />
+         <p class="lead">Oops! Our bad. Please try again.</p>
+      </div>
       <div class="container">
          <div class="row">
             <!-- Header Starts Here -->
@@ -97,7 +108,9 @@
 
                <div class="row mb-4">
                   <div class="col">
-                     <button class="btn btn-link">Back to answer</button>
+                     <button class="btn btn-link" id="back-to-answer">
+                        Back to answer
+                     </button>
                      <button
                         class="float-right btn btn-primary btn-lg"
                         id="save-imagery"
