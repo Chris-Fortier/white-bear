@@ -13,3 +13,14 @@ $("#save-imagery").click(function () {
 $("#back-to-answer").click(function () {
    $("#overlay-error").toggleClass("d-flex d-none");
 });
+
+// makes the checkbox show the delete button
+$("#show-delete").click(function () {
+   // $("#delete-button").toggleClass("d-none");
+   $("#delete-button").toggleClass("visible invisible");
+});
+
+// // makes the checkbox show the delete button
+// $("#bubba").click(function () {
+//    console.log("bubba");
+// });

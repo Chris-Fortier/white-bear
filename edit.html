@@ -148,22 +148,32 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
                      class="form-check-input"
                      type="checkbox"
                      value=""
-                     id="defaultCheck1"
+                     id="show-delete"
                   />
-                  <label class="form-check-label" for="defaultCheck1">
+                  <label class="form-check-label" for="show-delete">
                      Show delete button
                   </label>
                </div>
+
                <!-- delete this card button -->
-               <div class="row mb-4">
+               <div class="row mb-4 invisible" id="delete-button">
                   <div class="col">
                      <a class="btn btn-outline-danger" href="all-cards.html">
                         Delete this card
                      </a>
                   </div>
                </div>
+
+               <!-- end of content -->
             </div>
          </div>
       </div>
    </body>
+
+   <!-- JAVASCRIPT LOADING -->
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+   <script src="script.js" defer></script>
 </html>
