@@ -6,28 +6,6 @@
       <title>White Bear</title>
    </head>
    <body>
-      <div
-         class="bg-success w-100 py-4 d-none justify-content-center fixed-top"
-         id="overlay-success"
-      >
-         <img
-            src="/icons/success.svg"
-            width="24px"
-            style="margin-bottom: 3px; margin-right: 8px;"
-         />
-         <p class="lead">Card created!</p>
-      </div>
-      <div
-         class="bg-danger w-100 py-4 d-none justify-content-center fixed-top"
-         id="overlay-error"
-      >
-         <img
-            src="/icons/error.svg"
-            width="24px"
-            style="margin-bottom: 3px; margin-right: 8px;"
-         />
-         <p class="lead">Oops! Our bad. Please try again.</p>
-      </div>
       <div class="container">
          <div class="row">
             <!-- Header Starts Here -->
@@ -53,14 +31,14 @@
                   <a
                      type="button"
                      href="create-answer.html"
-                     class="btn btn-secondary btn-navigation tab-active"
+                     class="btn btn-secondary btn-navigation"
                   >
                      Create new
                   </a>
                   <a
                      type="button"
-                     href="review.html"
-                     class="btn btn-secondary tab-separator btn-navigation"
+                     href="review-imagery.html"
+                     class="btn btn-secondary tab-separator btn-navigation tab-active"
                   >
                      Review
                   </a>
@@ -75,21 +53,8 @@
 
                <!-- Header ends here -->
 
-               <h4>Add Memorable Imagery</h4>
-
-               <div class="mb-2">
+               <div class="mb-5">
                   <div class="card bg-primary">
-                     <div class="card-body">
-                        <textarea
-                           rows="11"
-                           class="d-sm-none"
-                           autofocus
-                        ></textarea>
-                        <textarea rows="6" class="d-none d-sm-block" autofocus>
-                        </textarea>
-                     </div>
-                  </div>
-                  <div class="card bg-secondary">
                      <div class="card-body">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing
                         elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -101,39 +66,25 @@
                   </div>
                </div>
 
-               <div class="float-right mb-5">
-                  <p>205/240</p>
-               </div>
-               <div class="clearfix"></div>
+               <!-- button row -->
 
                <div class="row mb-4">
                   <div class="col">
-                     <button class="btn btn-link" id="back-to-answer">
-                        Back to answer
-                     </button>
-                     <button
-                        class="float-right btn btn-primary btn-lg"
-                        id="save-imagery"
-                     >
-                        <img
-                           src="/icons/save.svg"
-                           width="20px"
-                           style="margin-bottom: 3px; margin-right: 8px;"
-                        />Save
-                     </button>
+                     <button class="btn btn-link">Previous card</button>
+                     <div class="float-right">
+                        <a
+                           class="btn btn-outline-primary btn-lg"
+                           href="review-answer.html"
+                        >
+                           Show answer
+                        </a>
+                     </div>
                   </div>
                </div>
 
-               <!-- end of buttons -->
+               <!-- end button row -->
             </div>
          </div>
       </div>
    </body>
-
-   <!-- JAVASCRIPT LOADING -->
-   <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      defer
-   ></script>
-   <script src="script.js" defer></script>
 </html>

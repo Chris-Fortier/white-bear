@@ -6,6 +6,28 @@
       <title>White Bear</title>
    </head>
    <body>
+      <div
+         class="bg-success w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-success"
+      >
+         <img
+            src="/icons/success.svg"
+            width="24px"
+            style="margin-bottom: 3px; margin-right: 8px;"
+         />
+         <p class="lead">Card created!</p>
+      </div>
+      <div
+         class="bg-danger w-100 py-4 d-none justify-content-center fixed-top"
+         id="overlay-error"
+      >
+         <img
+            src="/icons/error.svg"
+            width="24px"
+            style="margin-bottom: 3px; margin-right: 8px;"
+         />
+         <p class="lead">Oops! Our bad. Please try again.</p>
+      </div>
       <div class="container">
          <div class="row">
             <!-- Header Starts Here -->
@@ -31,14 +53,14 @@
                   <a
                      type="button"
                      href="create-answer.html"
-                     class="btn btn-secondary btn-navigation"
+                     class="btn btn-secondary btn-navigation tab-active"
                   >
                      Create new
                   </a>
                   <a
                      type="button"
-                     href="review.html"
-                     class="btn btn-secondary tab-separator btn-navigation tab-active"
+                     href="review-imagery.html"
+                     class="btn btn-secondary tab-separator btn-navigation"
                   >
                      Review
                   </a>
@@ -53,15 +75,18 @@
 
                <!-- Header ends here -->
 
-               <div class="mb-5">
+               <h4>Add Memorable Imagery</h4>
+
+               <div class="mb-2">
                   <div class="card bg-primary">
                      <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit. Aenean commodo ligula eget dolor. Aenean massa.
-                        Cum sociis natoque penatibus et magnis dis parturient
-                        montes, nascetur ridiculus mus. Donec quam felis,
-                        ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                        consequat massa
+                        <textarea
+                           rows="11"
+                           class="d-sm-none"
+                           autofocus
+                        ></textarea>
+                        <textarea rows="6" class="d-none d-sm-block" autofocus>
+                        </textarea>
                      </div>
                   </div>
                   <div class="card bg-secondary">
@@ -76,32 +101,39 @@
                   </div>
                </div>
 
-               <!-- button row -->
+               <div class="float-right mb-5">
+                  <p>205/240</p>
+               </div>
+               <div class="clearfix"></div>
 
                <div class="row mb-4">
                   <div class="col">
-                     <a class="btn btn-link" href="edit.html">Edit</a>
-                     <div class="float-right">
-                        <a
-                           class="btn btn-outline-primary mr-4"
-                           href="out-of-cards.html"
-                        >
-                           Needs work
-                        </a>
-                        <a class="btn btn-primary" href="out-of-cards.html">
-                           <img
-                              src="/icons/thumbs-up.svg"
-                              width="20px"
-                              style="margin-bottom: 5px; margin-right: 8px;"
-                           />Got it
-                        </a>
-                     </div>
+                     <button class="btn btn-link" id="back-to-answer">
+                        Back to answer
+                     </button>
+                     <button
+                        class="float-right btn btn-primary btn-lg"
+                        id="save-imagery"
+                     >
+                        <img
+                           src="/icons/save.svg"
+                           width="20px"
+                           style="margin-bottom: 3px; margin-right: 8px;"
+                        />Save
+                     </button>
                   </div>
                </div>
 
-               <!-- end button row -->
+               <!-- end of buttons -->
             </div>
          </div>
       </div>
    </body>
+
+   <!-- JAVASCRIPT LOADING -->
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+   <script src="script.js" defer></script>
 </html>
