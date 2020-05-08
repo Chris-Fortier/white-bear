@@ -90,13 +90,17 @@
    background-image: url("/images/background-landing.jpg"); // need / before folder name in this path
    background-position-x: center; // keeps image centered, does not stretch it
    background-position-y: center;
+   // background-size: auto;
    background-repeat: no-repeat;
+   background-color: black;
 }
 
 h4 {
    // change all h4 headings here in one place
    text-align: center;
    color: $text-muted;
+   // font-family: $font-family-brand;
+   // font-weight: $font-weight-normal;
 }
 
 .card textarea {
@@ -117,7 +121,19 @@ h4 {
    // height: 214px;
 }
 
-.bg-success,
+.bg-success p.lead,
 .bg-danger p.lead {
    color: $white;
+   margin-bottom: 0; // put here so I won't mess up p text on landing page elsewhere with the global theme solution
+}
+
+label {
+   // labels on the forms on the landing page
+   color: $text-muted;
+   font-size: $font-size-base * 1.25;
+   margin-top: map-get($spacers, 2);
+   margin-bottom: map-get($spacers, 1);
+}
+
+.banner-text {
 }
