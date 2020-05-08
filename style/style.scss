@@ -123,3 +123,9 @@ h4 {
    color: $white;
    margin-bottom: 0; // put here so I won't mess up p text on landing page elsewhere with the global theme solution
 }
+
+th {
+   // makes the table row titles normal muted instead of bold
+   color: $text-muted;
+   font-weight: $font-weight-normal;
+}

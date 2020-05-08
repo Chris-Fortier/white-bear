@@ -107,40 +107,30 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
                </div>
 
                <!-- card properties -->
-               <h4>Card properties</h4>
+               <h4 class="mt-6">Card properties</h4>
 
-               <div class="row">
-                  <div class="col-4">
-                     <p>Created on:</p>
-                  </div>
-                  <div class="col-8">
-                     <p>Dec. 24, 2019</p>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-4">
-                     <p>Last attempt:</p>
-                  </div>
-                  <div class="col-8">
-                     <p>Dec. 31, 2019</p>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-4">
-                     <p>Next attempt:</p>
-                  </div>
-                  <div class="col-8">
-                     <p>Jul. 14, 2020</p>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-4">
-                     <p>Consecutives:</p>
-                  </div>
-                  <div class="col-8">
-                     <p>4</p>
-                  </div>
-               </div>
+               <!-- https://getbootstrap.com/docs/4.4/content/tables/ -->
+               <!-- col-12 makes the table full width on smallest, col-sm-8 makes it take up 2/3 of width anything larger -->
+               <table class="col-12 col-sm-8 table table-borderless table-sm">
+                  <tbody>
+                     <tr>
+                        <th scope="row">Created on:</th>
+                        <td>Dec. 24, 2019</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Last attempt:</th>
+                        <td>Dec. 31, 2019</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Next attempt:</th>
+                        <td>Jul. 14, 2020</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Consecutives:</th>
+                        <td>4</td>
+                     </tr>
+                  </tbody>
+               </table>
 
                <!-- show delete button -->
                <div class="form-check">
