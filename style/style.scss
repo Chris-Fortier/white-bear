@@ -58,9 +58,7 @@
 
 .landing-page {
    // cjf
-   // background-color: black;
-   // background-image: url("images/background-landing.jpg");
-   // padding-top: 54px; // padding on top of landing page above logo and title need to use $spacers
+   // formatting specific to the landing page
 
    h1 {
       color: $white;
@@ -78,12 +76,6 @@
          8
       ); // adds space between the cards when displayed vertically with small screen sizes
    }
-
-   // background-image: url("images/background-landing.jpg");
-   // // height: 1080px;
-   // background-size: 100% 100%;
-   // background-repeat: no-repeat;
-   // background-attachment: fixed;
 }
 
 .background-image {
@@ -99,8 +91,6 @@ h4 {
    // change all h4 headings here in one place
    text-align: center;
    color: $text-muted;
-   // font-family: $font-family-brand;
-   // font-weight: $font-weight-normal;
 }
 
 .card textarea {
@@ -118,7 +108,6 @@ h4 {
    resize: none;
    padding: 0px;
    width: 100%;
-   // height: 214px;
 }
 
 .bg-success p.lead,
@@ -133,7 +122,4 @@ label {
    font-size: $font-size-base * 1.25;
    margin-top: map-get($spacers, 2);
    margin-bottom: map-get($spacers, 1);
-}
-
-.banner-text {
 }
