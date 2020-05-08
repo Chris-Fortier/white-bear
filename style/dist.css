@@ -11394,6 +11394,12 @@ h3 {
   padding: 1rem;
   margin-bottom: 64;
 }
+.landing-page label {
+  color: #80818d;
+  font-size: 1.25rem;
+  margin-top: 8;
+  margin-bottom: 4px;
+}
 
 .background-image {
   background-image: url("/images/background-landing.jpg");
@@ -11426,13 +11432,6 @@ h4 {
 .bg-danger p.lead {
   color: #ffffff;
   margin-bottom: 0;
-}
-
-label {
-  color: #80818d;
-  font-size: 1.25rem;
-  margin-top: 8;
-  margin-bottom: 4px;
 }
 
 /*# sourceMappingURL=dist.css.map */

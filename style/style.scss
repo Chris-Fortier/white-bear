@@ -76,6 +76,14 @@
          8
       ); // adds space between the cards when displayed vertically with small screen sizes
    }
+
+   label {
+      // labels on the forms on the landing page
+      color: $text-muted;
+      font-size: $font-size-base * 1.25;
+      margin-top: map-get($spacers, 2);
+      margin-bottom: map-get($spacers, 1);
+   }
 }
 
 .background-image {
@@ -114,12 +122,4 @@ h4 {
 .bg-danger p.lead {
    color: $white;
    margin-bottom: 0; // put here so I won't mess up p text on landing page elsewhere with the global theme solution
-}
-
-label {
-   // labels on the forms on the landing page
-   color: $text-muted;
-   font-size: $font-size-base * 1.25;
-   margin-top: map-get($spacers, 2);
-   margin-bottom: map-get($spacers, 1);
 }
