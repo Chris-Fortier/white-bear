@@ -11398,7 +11398,7 @@ h3 {
 .background-image {
   background-image: url("/images/background-landing.jpg");
   background-position-x: center;
-  background-position-y: center;
+  background-position-y: top;
   background-repeat: no-repeat;
   background-color: black;
 }
