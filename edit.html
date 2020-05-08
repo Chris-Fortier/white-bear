@@ -133,7 +133,18 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
                </table>
 
                <!-- show delete checkbox -->
-               <div class="form-check">
+               <div class="custom-control custom-checkbox mb-2">
+                  <input
+                     type="checkbox"
+                     class="custom-control-input"
+                     id="show-delete"
+                  />
+                  <label class="custom-control-label" for="show-delete"
+                     >Show delete button</label
+                  >
+               </div>
+
+               <!-- <div class="form-check">
                   <input
                      class="form-check-input"
                      type="checkbox"
@@ -143,7 +154,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
                   <label class="form-check-label" for="show-delete">
                      Show delete button
                   </label>
-               </div>
+               </div> -->
 
                <!-- delete this card button -->
                <div class="row mb-4 invisible" id="delete-button">

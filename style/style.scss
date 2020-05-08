@@ -135,7 +135,19 @@ th {
 }
 
 .form-control,
-.dropdown-toggle {
+.dropdown-toggle,
+select {
    // sets the border color of these things to a medium gray
    border-color: $gray-400;
+
+   // -webkit-box-shadow: none;
+   // -moz-box-shadow: none;
+   // box-shadow: none;
 }
+
+// .custom-control-label:before {
+//    background-color: none;
+// }
+// .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+//    background-color: $primary;
+// }
