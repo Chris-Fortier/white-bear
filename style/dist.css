@@ -11446,6 +11446,7 @@ th {
 .dropdown-toggle,
 select {
   border-color: #80818d;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=dist.css.map */

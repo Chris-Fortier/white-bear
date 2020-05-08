@@ -71,7 +71,7 @@
                </form>
 
                <!-- dropdown from Bootstrap -->
-               <form class="row mb-0">
+               <!-- <form class="row mb-0">
                   <label class="col-4">
                      Sort cards by
                   </label>
@@ -98,17 +98,27 @@
                         </div>
                      </div>
                   </div>
-               </form>
+               </form> -->
 
                <!-- select version -->
-               <label for="cars">Sort cards by</label>
+               <form class="row mb-0">
+                  <label for="cars" class="col-4">Sort cards by</label>
 
-               <select id="cars" class="float-right col-8 btn dropdown-toggle">
-                  <option value="volvo">Most recent</option>
-                  <option value="saab">Oldest</option>
-                  <option value="mercedes">Hardest</option>
-                  <option value="audi">Easiest</option>
-               </select>
+                  <div class="form-group col-8">
+                     <div class="dropdown">
+                        <select
+                           id="cars"
+                           class="float-right btn dropdown-toggle btn-block"
+                           style="height: 36px;"
+                        >
+                           <option value="volvo">Most recent</option>
+                           <option value="saab">Oldest</option>
+                           <option value="mercedes">Hardest</option>
+                           <option value="audi">Easiest</option>
+                        </select>
+                     </div>
+                  </div>
+               </form>
 
                <!-- one card -->
                <div class="row mb-5">
