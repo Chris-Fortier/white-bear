@@ -1,150 +1,108 @@
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="style/dist.css" />
-      <title>White Bear</title>
-   </head>
-   <body>
-      <div class="container">
-         <div class="row">
-            <div
-               class="col-12 col-xl-6 offset-xl3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
-            >
-               <!-- Header Starts Here -->
-               <img
-                  src="icons/logo-app.svg"
-                  width="32px;"
-                  alt="white bear logo"
-               />
-               <h3 class="d-inline text-brand">White Bear</h3>
-               <button class="btn btn-link float-right btn-navigation">
-                  <a href="index.html">Log Out</a>
-               </button>
 
-               <div
-                  class="btn-group d-flex mb-5"
-                  role="navigation"
-                  aria-label="navigation"
-               >
-                  <a
-                     type="button"
-                     href="create-answer.html"
-                     class="btn btn-secondary btn-navigation"
-                  >
-                     Create new
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style/dist.css" />
+   <title>White Bear</title>
+</head>
+
+<body>
+   <div class="container">
+      <div class="row">
+         <div class="col-12 col-xl-6 offset-xl3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <!-- Header Starts Here -->
+            <img src="icons/logo-app.svg" width="32px;" alt="white bear logo" />
+            <h3 class="d-inline text-brand">White Bear</h3>
+            <button class="btn btn-link float-right btn-navigation">
+               <a href="index.html">Log Out</a>
+            </button>
+
+            <div class="btn-group d-flex mb-5" role="navigation" aria-label="navigation">
+               <a type="button" href="create-answer.html" class="btn btn-secondary btn-navigation">
+                  Create new
+               </a>
+               <a type="button" href="review-imagery.html" class="btn btn-secondary tab-separator btn-navigation">
+                  Review
+               </a>
+               <a type="button" href="all-cards.html" class="btn btn-secondary tab-separator btn-navigation tab-active">
+                  All cards
+               </a>
+            </div>
+
+            <!-- Header ends here -->
+
+            <h4>Edit card</h4>
+
+            <div class="mb-2">
+               <div class="card bg-primary">
+                  <div class="card-body">
+                     <textarea rows="11" class="d-sm-none"
+                        autofocus>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</textarea>
+                     <textarea rows="6" class="d-none d-sm-block"
+                        autofocus>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</textarea>
+                  </div>
+               </div>
+               <div class="card bg-secondary">
+                  <div class="card-body">
+                     <textarea rows="11"
+                        class="d-sm-none">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</textarea>
+                     <textarea rows="6"
+                        class="d-none d-sm-block">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</textarea>
+                  </div>
+               </div>
+            </div>
+
+            <div class="float-right mb-5">
+               <p>205/240</p>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row mb-4">
+               <div class="col">
+                  <a class="btn btn-link" href="all-cards.html">Discard changes</a>
+               </div>
+
+               <div class="col">
+                  <a class="btn btn-primary btn-lg float-right" href="all-cards.html">
+                     <img src="/icons/save.svg" width="20px" style="margin-bottom: 5px; margin-right: 8px;" />Save
                   </a>
-                  <a
-                     type="button"
-                     href="review-imagery.html"
-                     class="btn btn-secondary tab-separator btn-navigation"
-                  >
-                     Review
-                  </a>
-                  <a
-                     type="button"
-                     href="all-cards.html"
-                     class="btn btn-secondary tab-separator btn-navigation tab-active"
-                  >
-                     All cards
-                  </a>
                </div>
+            </div>
 
-               <!-- Header ends here -->
+            <!-- card properties -->
+            <h4 class="mt-6">Card properties</h4>
 
-               <h4>Edit card</h4>
+            <!-- https://getbootstrap.com/docs/4.4/content/tables/ -->
+            <!-- col-12 makes the table full width on smallest, col-sm-8 makes it take up 2/3 of width anything larger -->
+            <table class="col-12 col-sm-8 table table-borderless table-sm">
+               <tbody>
+                  <tr>
+                     <th scope="row">Created on:</th>
+                     <td>Dec. 24, 2019</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Last attempt:</th>
+                     <td>Dec. 31, 2019</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Next attempt:</th>
+                     <td>Jul. 14, 2020</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">Consecutives:</th>
+                     <td>4</td>
+                  </tr>
+               </tbody>
+            </table>
 
-               <div class="mb-2">
-                  <div class="card bg-primary">
-                     <div class="card-body">
-                        <textarea rows="11" class="d-sm-none" autofocus>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes 
-                     </textarea
-                        >
-                        <textarea rows="6" class="d-none d-sm-block" autofocus>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes 
+            <!-- show delete checkbox -->
+            <div class="custom-control custom-checkbox mb-2">
+               <input type="checkbox" class="custom-control-input" id="show-delete" />
+               <label class="custom-control-label" for="show-delete">Show delete button</label>
+            </div>
 
-                        </textarea>
-                     </div>
-                  </div>
-                  <div class="card bg-secondary">
-                     <div class="card-body">
-                        <textarea rows="11" class="d-sm-none">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes 
-                        </textarea>
-                        <textarea rows="6" class="d-none d-sm-block">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes 
-
-                        </textarea>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="float-right mb-5">
-                  <p>205/240</p>
-               </div>
-               <div class="clearfix"></div>
-
-               <div class="row mb-4">
-                  <div class="col">
-                     <a class="btn btn-link" href="all-cards.html"
-                        >Discard changes</a
-                     >
-                  </div>
-
-                  <div class="col">
-                     <a
-                        class="btn btn-primary btn-lg float-right"
-                        href="all-cards.html"
-                     >
-                        <img
-                           src="/icons/save.svg"
-                           width="20px"
-                           style="margin-bottom: 5px; margin-right: 8px;"
-                        />Save
-                     </a>
-                  </div>
-               </div>
-
-               <!-- card properties -->
-               <h4 class="mt-6">Card properties</h4>
-
-               <!-- https://getbootstrap.com/docs/4.4/content/tables/ -->
-               <!-- col-12 makes the table full width on smallest, col-sm-8 makes it take up 2/3 of width anything larger -->
-               <table class="col-12 col-sm-8 table table-borderless table-sm">
-                  <tbody>
-                     <tr>
-                        <th scope="row">Created on:</th>
-                        <td>Dec. 24, 2019</td>
-                     </tr>
-                     <tr>
-                        <th scope="row">Last attempt:</th>
-                        <td>Dec. 31, 2019</td>
-                     </tr>
-                     <tr>
-                        <th scope="row">Next attempt:</th>
-                        <td>Jul. 14, 2020</td>
-                     </tr>
-                     <tr>
-                        <th scope="row">Consecutives:</th>
-                        <td>4</td>
-                     </tr>
-                  </tbody>
-               </table>
-
-               <!-- show delete checkbox -->
-               <div class="custom-control custom-checkbox mb-2">
-                  <input
-                     type="checkbox"
-                     class="custom-control-input"
-                     id="show-delete"
-                  />
-                  <label class="custom-control-label" for="show-delete"
-                     >Show delete button</label
-                  >
-               </div>
-
-               <!-- <div class="form-check">
+            <!-- <div class="form-check">
                   <input
                      class="form-check-input"
                      type="checkbox"
@@ -156,25 +114,23 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
                   </label>
                </div> -->
 
-               <!-- delete this card button -->
-               <div class="row mb-4 invisible" id="delete-button">
-                  <div class="col">
-                     <a class="btn btn-outline-danger" href="all-cards.html">
-                        Delete this card
-                     </a>
-                  </div>
+            <!-- delete this card button -->
+            <div class="row mb-4 invisible" id="delete-button">
+               <div class="col">
+                  <a class="btn btn-outline-danger" href="all-cards.html">
+                     Delete this card
+                  </a>
                </div>
-
-               <!-- end of content -->
             </div>
+
+            <!-- end of content -->
          </div>
       </div>
-   </body>
+   </div>
+</body>
 
-   <!-- JAVASCRIPT LOADING -->
-   <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      defer
-   ></script>
-   <script src="script.js" defer></script>
+<!-- JAVASCRIPT LOADING -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="script.js" defer></script>
+
 </html>
