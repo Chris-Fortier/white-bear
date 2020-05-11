@@ -69,6 +69,21 @@
       ); // somewhere between 6 and 7 matches the screenshot
    }
 
+   .small-title {
+      // smaller title logo and text in a small browser on the landing page
+
+      // shrinking logo
+      // img {
+      width: 20.3125vw; // 20.3125% is 156px logo width at 768 viewport withd, which is the size of the image when it starts shrinking
+      // }
+
+      // shrinking title text
+      // h1 {
+      font-size: 7.8125vw; // 7.8125% is 60px font at 768 viewport width, which is the size it should start shrinking from
+      // padding-left: 4.1667vw; // 4.1667% is 32px padding between logo and title, size it should be when it starts shrinking
+      // }
+   }
+
    .card {
       padding: map-get($spacers, 4); // padding for cards on title page
       margin-bottom: map-get(

@@ -11390,6 +11390,10 @@ h3 {
   vertical-align: middle;
   padding-left: 32;
 }
+.landing-page .small-title {
+  width: 20.3125vw;
+  font-size: 7.8125vw;
+}
 .landing-page .card {
   padding: 1rem;
   margin-bottom: 64;
