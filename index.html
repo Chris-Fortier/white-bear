@@ -77,15 +77,25 @@
                   <h2 class="card-title">Welcome back</h2>
                   <p>Log in with your email address and password.</p>
 
-                  <!-- need the mb-0 to remove a 16px margin at end of form -->
-                  <form class="mb-0">
+                  <form
+                     class="mb-0 needs-validation"
+                     novalidate
+                     action="create-answer.html"
+                  >
                      <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input
                            type="email"
                            class="form-control"
                            id="exampleInputEmail1"
+                           required
                         />
+                        <div class="valid-feedback">
+                           Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                           Please enter your email address.
+                        </div>
                      </div>
                      <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
@@ -93,13 +103,28 @@
                            type="password"
                            class="form-control"
                            id="exampleInputPassword1"
+                           required
                         />
+                        <div class="valid-feedback">
+                           Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                           Please enter your password.
+                        </div>
                      </div>
-                     <a
+                     <button
+                        class="btn btn-success float-right"
+                        type="submit"
+                        href="create-answer.html"
+                     >
+                        Test form
+                     </button>
+                     <!-- <a
                         href="create-answer.html"
                         class="btn btn-success float-right"
+                        type="submit"
                         >Log in</a
-                     >
+                     > -->
                   </form>
                </div>
             </div>
@@ -114,4 +139,39 @@
       defer
    ></script>
    <script src="script.js" defer></script>
+   <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+         "use strict";
+         window.addEventListener(
+            "load",
+            function () {
+               // Fetch all the forms we want to apply custom Bootstrap validation styles to
+               var forms = document.getElementsByClassName("needs-validation");
+               // Loop over them and prevent submission
+               var validation = Array.prototype.filter.call(forms, function (
+                  form
+               ) {
+                  form.addEventListener(
+                     "submit",
+                     function (event) {
+                        if (form.checkValidity() === false) {
+                           console.log("form is not valid");
+                           event.preventDefault();
+                           event.stopPropagation();
+                        }
+                        // else {
+                        //    console.log("form is valid");
+                        //    window.location.href = "create-answer.html";
+                        // }
+                        form.classList.add("was-validated");
+                     },
+                     false
+                  );
+               });
+            },
+            false
+         );
+      })();
+   </script>
 </html>
