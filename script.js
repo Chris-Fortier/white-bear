@@ -34,7 +34,7 @@ $("#answerField").keyup(function () {
       $("#next-button").addClass("disabled");
       $("#counter").addClass("text-danger");
    } else {
-      $("#next-button").removeClass("disabled text-danger");
+      $("#next-button").removeClass("disabled");
       $("#counter").removeClass("text-danger");
    }
 });
