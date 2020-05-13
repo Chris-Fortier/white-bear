@@ -45,6 +45,8 @@ $(".login-button").click(function () {
 
    console.log("clicked log in button");
 
+   var successful = true;
+
    // $(event.target)
    //    .parent()
    //    .children()
@@ -58,6 +60,7 @@ $(".login-button").click(function () {
    if (emailLength == 0) {
       siblingPath.children(".email-error").removeClass("d-none"); // show the email error message
       siblingPath.children(".email-error").text("Please enter your email.");
+      successful = false;
    } else {
       siblingPath.children(".email-error").addClass("d-none"); // hide the error message
    }
@@ -70,6 +73,7 @@ $(".login-button").click(function () {
       siblingPath
          .children(".password-error")
          .text("Your password must be at least 9 characters.");
+      successful = false;
 
       if (passwordLength == 0) {
          // password is empty
@@ -80,6 +84,11 @@ $(".login-button").click(function () {
    } else {
       // password is fine
       siblingPath.children(".password-error").addClass("d-none"); // hide the error message
+   }
+
+   if (successful == true) {
+      console.log("submit successful!");
+      window.location.replace("create-answer.html");
    }
 });
 
