@@ -87,6 +87,7 @@ $(".login-button").click(function () {
    }
 
    if (successful == true) {
+      // go to the next page if user entered data into the form correctly
       console.log("submit successful!");
       window.location.replace("create-answer.html");
    }
