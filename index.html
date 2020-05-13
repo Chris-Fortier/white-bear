@@ -42,22 +42,17 @@
                      class="mb-0 d-none needs-validation"
                      id="sign-up-form"
                      novalidate
-                     action="create-answer.html"
                   >
                      <p class="text-success">Let's get you signed up</p>
                      <div class="form-group">
                         <label for="exampleInputEmail2">Email address</label>
                         <input
                            type="email"
-                           class="form-control"
-                           id="exampleInputEmail2"
+                           class="form-control email-input"
                            required
                         />
-                        <div class="valid-feedback">
-                           Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                           Please enter your email address.
+                        <div class="d-none text-danger email-error">
+                           email error
                         </div>
                      </div>
                      <div class="form-group">
@@ -66,18 +61,14 @@
                         >
                         <input
                            type="password"
-                           class="form-control"
-                           id="exampleInputPassword2"
+                           class="form-control password-input"
                            required
                         />
-                        <div class="valid-feedback">
-                           Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                           Please enter your password.
+                        <div class="d-none text-danger password-error">
+                           password error
                         </div>
                      </div>
-                     <button class="btn btn-success w-100" type="submit">
+                     <button class="btn btn-success w-100 login-button">
                         Let's Go
                      </button>
                   </form>
@@ -102,11 +93,10 @@
                         <label for="exampleInputEmail1">Email address</label>
                         <input
                            type="email"
-                           class="form-control"
-                           id="login-email"
+                           class="form-control email-input"
                            required
                         />
-                        <div id="login-email-error" class="d-none text-danger">
+                        <div class="d-none text-danger email-error">
                            email error
                         </div>
                      </div>
@@ -114,21 +104,14 @@
                         <label for="exampleInputPassword1">Password</label>
                         <input
                            type="password"
-                           class="form-control"
-                           id="login-password"
+                           class="form-control password-input"
                            required
                         />
-                        <div
-                           id="login-password-error"
-                           class="d-none text-danger"
-                        >
+                        <div class="d-none text-danger password-error">
                            password error
                         </div>
                      </div>
-                     <button
-                        class="btn btn-success float-right"
-                        id="login-button"
-                     >
+                     <button class="btn btn-success float-right login-button">
                         Log in
                      </button>
                      <!-- <a

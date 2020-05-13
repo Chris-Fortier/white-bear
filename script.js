@@ -40,34 +40,46 @@ $("#answerField").keyup(function () {
    $(".counter").text(stringLength + "/240");
 });
 
-$("#login-button").click(function () {
+$(".login-button").click(function () {
+   // this function can work on either the sign up or log in form as it uses the realtive html structure to know what to work on
+
    console.log("clicked log in button");
 
+   // $(event.target)
+   //    .parent()
+   //    .children()
+   //    .children(".email-error")
+   //    .removeClass("d-none"); // show the email error message
+
+   var siblingPath = $(event.target).parent().children(); // made this a variable to simplify code below
+
    // check if email is gtg
-   var emailLength = $("#login-email").val().length;
+   var emailLength = siblingPath.children(".email-input").val().length;
    if (emailLength == 0) {
-      $("#login-email-error").removeClass("d-none"); // show the error message
-      $("#login-email-error").text("Please enter your email.");
+      siblingPath.children(".email-error").removeClass("d-none"); // show the email error message
+      siblingPath.children(".email-error").text("Please enter your email.");
    } else {
-      $("#login-email-error").addClass("d-none"); // hide the error message
+      siblingPath.children(".email-error").addClass("d-none"); // hide the error message
    }
 
    // check if password is gtg
-   var passwordLength = $("#login-password").val().length;
+   var passwordLength = siblingPath.children(".password-input").val().length;
    if (passwordLength < 9) {
       // password needs to be fixed
-      $("#login-password-error").removeClass("d-none"); // show the error message
-      $("#login-password-error").text(
-         "Your password must be at least 9 characters."
-      );
+      siblingPath.children(".password-error").removeClass("d-none"); // show the error message
+      siblingPath
+         .children(".password-error")
+         .text("Your password must be at least 9 characters.");
 
       if (passwordLength == 0) {
          // password is empty
-         $("#login-password-error").text("Please enter your password.");
+         siblingPath
+            .children(".password-error")
+            .text("Please enter your password.");
       }
    } else {
       // password is fine
-      $("#login-password-error").addClass("d-none"); // hide the error message
+      siblingPath.children(".password-error").addClass("d-none"); // hide the error message
    }
 });
 
