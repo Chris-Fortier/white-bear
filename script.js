@@ -25,30 +25,49 @@ $("#show-delete").click(function () {
 //    console.log("bubba");
 // });
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-   "use strict";
-   window.addEventListener(
-      "load",
-      function () {
-         // Fetch all the forms we want to apply custom Bootstrap validation styles to
-         var forms = document.getElementsByClassName("needs-validation");
-         // Loop over them and prevent submission
-         var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener(
-               "submit",
-               function (event) {
-                  if (form.checkValidity() === false) {
-                     console.log("form is not valid");
-                     event.preventDefault();
-                     event.stopPropagation();
-                  }
-                  form.classList.add("was-validated");
-               },
-               false
-            );
-         });
-      },
-      false
-   );
-})();
+// Find the Length of a String
+function charCount() {
+   // finds the length of the input string
+   // return input.length;
+   // console.log("charCount called");
+   string = $("#answerField").val();
+   $(".counter").replaceWith(string + "/240");
+}
+
+$("#answerField").keyup(function () {
+   stringLength = $("#answerField").val().length;
+   // console.log("updating counter to " + stringLength);
+   $(".counter").text(stringLength + "/240");
+});
+
+console.log("hello")(
+   // Example starter JavaScript for disabling form submissions if there are invalid fields
+   function () {
+      "use strict";
+      window.addEventListener(
+         "load",
+         function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (
+               form
+            ) {
+               form.addEventListener(
+                  "submit",
+                  function (event) {
+                     if (form.checkValidity() === false) {
+                        console.log("form is not valid");
+                        event.preventDefault();
+                        event.stopPropagation();
+                     }
+                     form.classList.add("was-validated");
+                  },
+                  false
+               );
+            });
+         },
+         false
+      );
+   }
+)();
