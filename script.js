@@ -28,13 +28,14 @@ $("#show-delete").click(function () {
 $("#answerField").keyup(function () {
    // disables the Next button unless there are between 1 and 240 characters in the field
    stringLength = $("#answerField").val().length;
-   $(".counter").text(stringLength + "/240");
+   $("#counter").text(stringLength + "/240");
 
-   console.log(stringLength);
    if (stringLength == 0 || stringLength > 240) {
       $("#next-button").addClass("disabled");
+      $("#counter").addClass("text-danger");
    } else {
-      $("#next-button").removeClass("disabled");
+      $("#next-button").removeClass("disabled text-danger");
+      $("#counter").removeClass("text-danger");
    }
 });
 
