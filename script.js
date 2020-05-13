@@ -25,19 +25,17 @@ $("#show-delete").click(function () {
 //    console.log("bubba");
 // });
 
-// Find the Length of a String
-function charCount() {
-   // finds the length of the input string
-   // return input.length;
-   // console.log("charCount called");
-   var string = $("#answerField").val();
-   $(".counter").replaceWith(string + "/240");
-}
-
 $("#answerField").keyup(function () {
+   // disables the Next button unless there are between 1 and 240 characters in the field
    stringLength = $("#answerField").val().length;
-   // console.log("updating counter to " + stringLength);
    $(".counter").text(stringLength + "/240");
+
+   console.log(stringLength);
+   if (stringLength == 0 || stringLength > 240) {
+      $("#next-button").addClass("disabled");
+   } else {
+      $("#next-button").removeClass("disabled");
+   }
 });
 
 $(".login-button").click(function () {
