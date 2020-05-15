@@ -39,7 +39,7 @@ $("#answerField").keyup(function () {
    }
 });
 
-$(".login-button").click(function () {
+$(".new-user-button").click(function () {
    // this function can work on either the sign up or log in form as it uses the realtive html structure to know what to work on
 
    console.log("clicked submit button");
@@ -67,9 +67,15 @@ $(".login-button").click(function () {
       console.log(emailError);
       siblingPath.children(".email-error").text(emailError); // place the error message
       siblingPath.children(".email-error").removeClass("d-none"); // show the error message
+      siblingPath
+         .children(".email-input")
+         .addClass("text-danger border-danger"); // Style the email input to highlight the error
    } else {
       // password is fine
       siblingPath.children(".email-error").addClass("d-none"); // hide the error message
+      siblingPath
+         .children(".email-input")
+         .removeClass("text-danger border-danger"); // remove the error style from input
    }
 
    // end email checking
@@ -86,8 +92,7 @@ $(".login-button").click(function () {
    // find the local part of the email address
    emailLocalpart = emailInput.slice(0, atPos);
    if (passwordInput.indexOf(emailLocalpart) > -1) {
-      passwordError =
-         "Your password cannot contain the local-part of your email address.";
+      passwordError = "Your email address cannot be used in your password.";
    } else if (passwordLength < 9) {
       // password needs to be fixed
       passwordError = "Your password must be at least 9 characters";
@@ -103,9 +108,15 @@ $(".login-button").click(function () {
       console.log(passwordError);
       siblingPath.children(".password-error").text(passwordError); // place the error message
       siblingPath.children(".password-error").removeClass("d-none"); // show the error message
+      siblingPath
+         .children(".password-input")
+         .addClass("text-danger border-danger"); // Style the email input to highlight the error
    } else {
       // password is fine
       siblingPath.children(".password-error").addClass("d-none"); // hide the error message
+      siblingPath
+         .children(".password-input")
+         .removeClass("text-danger border-danger"); // remove the error style from input
    }
 
    // end password checking
