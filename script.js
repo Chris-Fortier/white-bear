@@ -56,6 +56,20 @@ function generateID() {
    return dateMS + randoStr;
 }
 
+function getCreatedDate() {
+   // createdOn: a new number based on the JavaScript Date object of today's date and time.
+   var theDate = new Date(Date.now());
+   var finalDate = "";
+   finalDate += String(theDate.getFullYear()).slice(-2);
+   finalDate += ("00" + String(theDate.getMonth() + 1)).slice(-2);
+   finalDate += ("00" + String(theDate.getDate())).slice(-2);
+   finalDate += ("00" + String(theDate.getHours())).slice(-2);
+   finalDate += ("00" + String(theDate.getMinutes())).slice(-2);
+   finalDate += ("00" + String(theDate.getSeconds())).slice(-2);
+
+   return finalDate;
+}
+
 $("#new-user-button").click(function () {
    // check if email is gtg
 
@@ -129,24 +143,11 @@ $("#new-user-button").click(function () {
       // go to the next page if user entered data into the form correctly
       console.log("submit successful!");
 
-      // createdOn: a new number based on the JavaScript Date object of today's date and time.
-      var theDate = new Date(Date.now());
-      var finalDate = "";
-      finalDate += String(theDate.getFullYear()).slice(-2);
-      finalDate += ("00" + String(theDate.getMonth() + 1)).slice(-2);
-      finalDate += ("00" + String(theDate.getDate())).slice(-2);
-      finalDate += ("00" + String(theDate.getHours())).slice(-2);
-      finalDate += ("00" + String(theDate.getMinutes())).slice(-2);
-      finalDate += ("00" + String(theDate.getSeconds())).slice(-2);
-
-      // console.log(dateCode, rando);
-      // console.log("_id:", dateMS + rando);
-
       var newUserSubmission = {
          _id: generateID(),
          email: emailInput,
          password: passwordInput,
-         createdOn: finalDate,
+         createdOn: getCreatedDate(),
       };
 
       console.log(newUserSubmission);
