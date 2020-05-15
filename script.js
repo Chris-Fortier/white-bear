@@ -42,50 +42,76 @@ $("#answerField").keyup(function () {
 $(".login-button").click(function () {
    // this function can work on either the sign up or log in form as it uses the realtive html structure to know what to work on
 
-   console.log("clicked log in button");
-
-   var successful = true;
-
-   // $(event.target)
-   //    .parent()
-   //    .children()
-   //    .children(".email-error")
-   //    .removeClass("d-none"); // show the email error message
+   console.log("clicked submit button");
 
    var siblingPath = $(event.target).parent().children(); // made this a variable to simplify code below
 
    // check if email is gtg
-   var emailLength = siblingPath.children(".email-input").val().length;
+
+   var emailInput = siblingPath.children(".email-input").val();
+
+   var atPos = emailInput.indexOf("@");
+
+   var emailError = ""; // initialize this to no error
+
+   var emailLength = emailInput.length;
+
    if (emailLength == 0) {
-      siblingPath.children(".email-error").removeClass("d-none"); // show the email error message
-      siblingPath.children(".email-error").text("Please enter your email.");
-      successful = false;
+      emailError = "Please enter your email.";
+   } else if (atPos == -1) {
+      emailError = "This doesn't look like a real email address.";
+   }
+
+   if (emailError != "") {
+      // if there is an error, show it and display it
+      console.log(emailError);
+      siblingPath.children(".email-error").text(emailError); // place the error message
+      siblingPath.children(".email-error").removeClass("d-none"); // show the error message
    } else {
+      // password is fine
       siblingPath.children(".email-error").addClass("d-none"); // hide the error message
    }
 
+   // end email checking
+
    // check if password is gtg
-   var passwordLength = siblingPath.children(".password-input").val().length;
-   if (passwordLength < 9) {
+
+   var passwordInput = siblingPath.children(".password-input").val();
+
+   var passwordLength = passwordInput.length;
+
+   var passwordError = ""; // initialize this to no error
+
+   // The password cannot contain the local-part of the email address the user entered.
+   // find the local part of the email address
+   emailLocalpart = emailInput.slice(0, atPos);
+   if (passwordInput.indexOf(emailLocalpart) > -1) {
+      passwordError =
+         "Your password cannot contain the local-part of your email address.";
+   } else if (passwordLength < 9) {
       // password needs to be fixed
-      siblingPath.children(".password-error").removeClass("d-none"); // show the error message
-      siblingPath
-         .children(".password-error")
-         .text("Your password must be at least 9 characters.");
-      successful = false;
+      passwordError = "Your password must be at least 9 characters";
 
       if (passwordLength == 0) {
          // password is empty
-         siblingPath
-            .children(".password-error")
-            .text("Please enter your password.");
+         passwordError = "Please enter your password.";
       }
+   }
+
+   if (passwordError != "") {
+      // if there is an error, show it and display it
+      console.log(passwordError);
+      siblingPath.children(".password-error").text(passwordError); // place the error message
+      siblingPath.children(".password-error").removeClass("d-none"); // show the error message
    } else {
       // password is fine
       siblingPath.children(".password-error").addClass("d-none"); // hide the error message
    }
 
-   if (successful == true) {
+   // end password checking
+
+   // check if successful and if so go to next page
+   if (emailError == "" && passwordError == "") {
       // go to the next page if user entered data into the form correctly
       console.log("submit successful!");
       window.location.replace("create-answer.html");
