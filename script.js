@@ -40,11 +40,7 @@ $("#answerField").keyup(function () {
 });
 
 $("#new-user-button").click(function () {
-   // this function can work on either the sign up or log in form as it uses the realtive html structure to know what to work on
-
    console.log("clicked submit button");
-
-   // var siblingPath = $(event.target).parent().children(); // made this a variable to simplify code below
 
    // check if email is gtg
 
