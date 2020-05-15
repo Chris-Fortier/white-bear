@@ -40,8 +40,6 @@ $("#answerField").keyup(function () {
 });
 
 $("#new-user-button").click(function () {
-   console.log("clicked submit button");
-
    // check if email is gtg
 
    var emailInput = $("#new-email-input").val();
@@ -151,6 +149,70 @@ $("#new-user-button").click(function () {
 
       // take the user to the next page
       // window.location.replace("create-answer.html");
+   }
+});
+
+$("#login-button").click(function () {
+   // check if email is gtg
+
+   var emailInput = $("#existing-email-input").val();
+
+   var emailError = ""; // initialize this to no error
+
+   var emailLength = emailInput.length;
+
+   if (emailLength == 0) {
+      emailError = "Please enter your email.";
+   }
+
+   if (emailError != "") {
+      // if there is an error, show it and display it
+      console.log(emailError);
+      $("#existing-email-error").text(emailError); // place the error message
+      $("#existing-email-error").removeClass("d-none"); // show the error message
+      $("#existing-email-input").addClass("text-danger border-danger"); // Style the email input to highlight the error
+   } else {
+      // password is fine
+      $("#existing-email-error").addClass("d-none"); // hide the error message
+      $("#existing-email-input").removeClass("text-danger border-danger"); // remove the error style from input
+   }
+
+   // end email checking
+
+   // check if password is gtg
+
+   var passwordInput = $("#existing-password-input").val();
+
+   var passwordLength = passwordInput.length;
+
+   var passwordError = ""; // initialize this to no error
+
+   if (passwordLength == 0) {
+      // password is empty
+      passwordError = "Please enter your password.";
+   }
+
+   if (passwordError != "") {
+      // if there is an error, show it and display it
+      console.log(passwordError);
+      $("#existing-password-error").text(passwordError); // place the error message
+      $("#existing-password-error").removeClass("d-none"); // show the error message
+      $("#existing-password-input").addClass("text-danger border-danger"); // Style the email input to highlight the error
+   } else {
+      // password is fine
+      $("#existing-password-error").addClass("d-none"); // hide the error message
+      $("#existing-password-input").removeClass("text-danger border-danger"); // remove the error style from input
+   }
+
+   // end password checking
+
+   // check if successful and if so go to next page
+   if (emailError == "" && passwordError == "") {
+      // go to the next page if user entered data into the form correctly
+      console.log("submit successful!");
+
+      // take the user to the next page
+      window.location.replace("create-answer.html");
    }
 });
 
