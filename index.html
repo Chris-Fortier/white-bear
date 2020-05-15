@@ -48,10 +48,11 @@
                         <label for="exampleInputEmail2">Email address</label>
                         <input
                            type="email"
-                           class="form-control email-input"
+                           class="form-control"
+                           id="new-email-input"
                            required
                         />
-                        <div class="d-none text-danger email-error">
+                        <div class="d-none text-danger" id="new-email-error">
                            email error
                         </div>
                      </div>
@@ -61,14 +62,19 @@
                         >
                         <input
                            type="password"
-                           class="form-control password-input"
+                           class="form-control"
+                           id="new-password-input"
                            required
                         />
-                        <div class="d-none text-danger password-error">
+                        <div class="d-none text-danger" id="new-password-error">
                            password error
                         </div>
                      </div>
-                     <a class="btn btn-success w-100 new-user-button" href="#">
+                     <a
+                        class="btn btn-success w-100"
+                        href="#"
+                        id="new-user-button"
+                     >
                         Let's Go
                      </a>
                   </form>
@@ -92,10 +98,14 @@
                         <label for="exampleInputEmail1">Email address</label>
                         <input
                            type="email"
-                           class="form-control email-input"
+                           class="form-control"
+                           id="existing-email-input"
                            required
                         />
-                        <div class="d-none text-danger email-error">
+                        <div
+                           class="d-none text-danger"
+                           id="existing-email-error"
+                        >
                            email error
                         </div>
                      </div>
@@ -103,15 +113,20 @@
                         <label for="exampleInputPassword1">Password</label>
                         <input
                            type="password"
-                           class="form-control password-input"
+                           class="form-control"
+                           id="existing-password-input"
                            required
                         />
-                        <div class="d-none text-danger password-error">
+                        <div
+                           class="d-none text-danger"
+                           id="existing-password-error"
+                        >
                            password error
                         </div>
                      </div>
                      <a
-                        class="btn btn-success float-right login-button"
+                        class="btn btn-success float-right"
+                        id="login-button"
                         href="#"
                      >
                         Log in

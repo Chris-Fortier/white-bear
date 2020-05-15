@@ -39,16 +39,16 @@ $("#answerField").keyup(function () {
    }
 });
 
-$(".new-user-button").click(function () {
+$("#new-user-button").click(function () {
    // this function can work on either the sign up or log in form as it uses the realtive html structure to know what to work on
 
    console.log("clicked submit button");
 
-   var siblingPath = $(event.target).parent().children(); // made this a variable to simplify code below
+   // var siblingPath = $(event.target).parent().children(); // made this a variable to simplify code below
 
    // check if email is gtg
 
-   var emailInput = siblingPath.children(".email-input").val();
+   var emailInput = $("#new-email-input").val();
 
    var atPos = emailInput.indexOf("@");
 
@@ -65,24 +65,20 @@ $(".new-user-button").click(function () {
    if (emailError != "") {
       // if there is an error, show it and display it
       console.log(emailError);
-      siblingPath.children(".email-error").text(emailError); // place the error message
-      siblingPath.children(".email-error").removeClass("d-none"); // show the error message
-      siblingPath
-         .children(".email-input")
-         .addClass("text-danger border-danger"); // Style the email input to highlight the error
+      $("#new-email-error").text(emailError); // place the error message
+      $("#new-email-error").removeClass("d-none"); // show the error message
+      $("#new-email-input").addClass("text-danger border-danger"); // Style the email input to highlight the error
    } else {
       // password is fine
-      siblingPath.children(".email-error").addClass("d-none"); // hide the error message
-      siblingPath
-         .children(".email-input")
-         .removeClass("text-danger border-danger"); // remove the error style from input
+      $("#new-email-error").addClass("d-none"); // hide the error message
+      $("#new-email-input").removeClass("text-danger border-danger"); // remove the error style from input
    }
 
    // end email checking
 
    // check if password is gtg
 
-   var passwordInput = siblingPath.children(".password-input").val();
+   var passwordInput = $("#new-password-input").val();
 
    var passwordLength = passwordInput.length;
 
@@ -106,17 +102,13 @@ $(".new-user-button").click(function () {
    if (passwordError != "") {
       // if there is an error, show it and display it
       console.log(passwordError);
-      siblingPath.children(".password-error").text(passwordError); // place the error message
-      siblingPath.children(".password-error").removeClass("d-none"); // show the error message
-      siblingPath
-         .children(".password-input")
-         .addClass("text-danger border-danger"); // Style the email input to highlight the error
+      $("#new-password-error").text(passwordError); // place the error message
+      $("#new-password-error").removeClass("d-none"); // show the error message
+      $("#new-password-input").addClass("text-danger border-danger"); // Style the email input to highlight the error
    } else {
       // password is fine
-      siblingPath.children(".password-error").addClass("d-none"); // hide the error message
-      siblingPath
-         .children(".password-input")
-         .removeClass("text-danger border-danger"); // remove the error style from input
+      $("#new-password-error").addClass("d-none"); // hide the error message
+      $("#new-password-input").removeClass("text-danger border-danger"); // remove the error style from input
    }
 
    // end password checking
