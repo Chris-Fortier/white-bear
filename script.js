@@ -39,6 +39,23 @@ $("#answerField").keyup(function () {
    }
 });
 
+function generateID() {
+   // _id: concatenating the milliseconds of the current datetime with a random number between 000 and 999.
+   var dateCode = Date.now(); // js number representing the date and time
+   dateStr = String(dateCode);
+   var dateMS = dateStr.slice(dateStr.length - 3);
+   var rando = Math.floor(Math.random() * 1000);
+   var randoStr = String(rando);
+   // If the number of milliseconds or your random numbers is less that 3 characters long, be sure you pad it with 0s to the left, enuring each is 3 characters long.
+   if (rando < 10) {
+      randoStr = "0" + randoStr;
+   }
+   if (rando < 100) {
+      randoStr = "0" + randoStr;
+   }
+   return dateMS + randoStr;
+}
+
 $("#new-user-button").click(function () {
    // check if email is gtg
 
@@ -113,7 +130,6 @@ $("#new-user-button").click(function () {
       console.log("submit successful!");
 
       // createdOn: a new number based on the JavaScript Date object of today's date and time.
-      var dateCode = Date.now(); // js number representing the date and time
       var theDate = new Date(Date.now());
       var finalDate = "";
       finalDate += String(theDate.getFullYear()).slice(-2);
@@ -123,23 +139,11 @@ $("#new-user-button").click(function () {
       finalDate += ("00" + String(theDate.getMinutes())).slice(-2);
       finalDate += ("00" + String(theDate.getSeconds())).slice(-2);
 
-      // _id: concatenating the milliseconds of the current datetime with a random number between 000 and 999.
-      dateStr = String(dateCode);
-      var dateMS = dateStr.slice(dateStr.length - 3);
-      var rando = Math.floor(Math.random() * 1000);
-      var randoStr = String(rando);
-      // If the number of milliseconds or your random numbers is less that 3 characters long, be sure you pad it with 0s to the left, enuring each is 3 characters long.
-      if (rando < 10) {
-         randoStr = "0" + randoStr;
-      }
-      if (rando < 100) {
-         randoStr = "0" + randoStr;
-      }
       // console.log(dateCode, rando);
       // console.log("_id:", dateMS + rando);
 
       var newUserSubmission = {
-         _id: dateMS + rando,
+         _id: generateID(),
          email: emailInput,
          password: passwordInput,
          createdOn: finalDate,
