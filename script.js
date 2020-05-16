@@ -221,6 +221,18 @@ $("#login-button").click(function () {
    }
 });
 
-// $("#login-button").click(function () {
+$("#save-imagery").click(function () {
+   console.log("save imagery clicked");
 
-// });
+   var submission = {
+      _id: generateID(),
+      imagery: $("#imagery-content").val(),
+      answer: $("#answer-content").text(), // contains messy whitespace due to it grabbing raw html text
+      levelNum: 1,
+      successfulAttemptsNum: 0,
+      createdOn: getCreatedDate(),
+      lastAttemptedOn: getCreatedDate(), // same as createdOn
+   };
+
+   console.log(submission);
+});
