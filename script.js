@@ -104,24 +104,22 @@ $("#new-user-button").click(function () {
    // check if password is gtg
 
    var passwordInput = $("#new-password-input").val();
-
    var passwordLength = passwordInput.length;
-
    var passwordError = ""; // initialize this to no error
+   var emailLocalpart = emailInput.slice(0, atPos);
+
+   if (passwordLength == 0) {
+      // password is empty
+      passwordError = "Please enter your password.";
+   } else if (passwordLength < 9) {
+      // password is too short
+      passwordError = "Your password must be at least 9 characters";
+   }
 
    // The password cannot contain the local-part of the email address the user entered.
    // find the local part of the email address
-   emailLocalpart = emailInput.slice(0, atPos);
-   if (passwordInput.indexOf(emailLocalpart) > -1) {
+   else if (passwordInput.indexOf(emailLocalpart) > -1) {
       passwordError = "Your email address cannot be used in your password.";
-   } else if (passwordLength < 9) {
-      // password needs to be fixed
-      passwordError = "Your password must be at least 9 characters";
-
-      if (passwordLength == 0) {
-         // password is empty
-         passwordError = "Please enter your password.";
-      }
    }
 
    if (passwordError != "") {
