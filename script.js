@@ -585,8 +585,14 @@ $("#save-imagery").click(function () {
 
    var submission = {
       _id: generateID(),
-      imagery: $("#imagery-content").val(),
-      answer: $("#answer-content").text(), // contains messy whitespace due to it grabbing raw html text
+      // imagery: $("#imagery-content").val(),
+      // answer: $("#answer-content").text(), // contains messy whitespace due to it grabbing raw html text
+      imagery: encodeURIComponent(
+         "A delicious shishkebab but the first bite of meat after the pointy end is spicy & makes an exclamation point appear over my head like in a JRPG."
+      ),
+      answer: encodeURIComponent(
+         "The syntax for making a comment in HTML is <!-- Mike's comment here -->"
+      ),
       levelNum: 1,
       successfulAttemptsNum: 0,
       createdOn: getCreatedDate(),
