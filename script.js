@@ -511,10 +511,37 @@ $("#new-user-button").click(function () {
       // go to the next page if user entered data into the form correctly
       console.log("submit successful!");
 
+      // "encrypt" the password decoder ring style
+      var encryptedPassword = "";
+      for (let i in passwordInput) {
+         let plaintextLetter = passwordInput[i];
+         if (
+            passwordInput.charCodeAt(i) >= 65 &&
+            passwordInput.charCodeAt(i) <= 122
+         ) {
+            // if the character is a letter
+            if (plaintextLetter == "z") {
+               // wrap around lowercase
+               encryptedLetter = "a";
+            } else if (plaintextLetter == "Z") {
+               // wrap around uppercase
+               encryptedLetter = "A";
+            } else {
+               // increase the char code by 1
+               encryptedLetter = String.fromCharCode(
+                  passwordInput.charCodeAt(i) + 1
+               );
+            }
+         } else {
+            encryptedLetter = plaintextLetter; // do not change the character
+         }
+         encryptedPassword = encryptedPassword + encryptedLetter;
+      }
+
       var newUserSubmission = {
          _id: generateID(),
          email: emailInput,
-         password: passwordInput,
+         password: encryptedPassword,
          createdOn: getCreatedDate(),
       };
 
