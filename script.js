@@ -427,17 +427,28 @@ $("#new-user-button").click(function () {
    // check if email is gtg
 
    var emailInput = $("#new-email-input").val();
-
    var atPos = emailInput.indexOf("@");
-
    var emailError = ""; // initialize this to no error
-
    var emailLength = emailInput.length;
+   var emailLocalpart = emailInput.slice(0, atPos);
+
+   // find how many unique characgters are in the local part of the email
+   uniqueCharacters = "";
+   for (let i in emailLocalpart) {
+      console.log();
+      if (uniqueCharacters.indexOf(emailLocalpart[i]) == -1) {
+         uniqueCharacters = uniqueCharacters + emailLocalpart[i];
+      }
+   }
 
    if (emailLength == 0) {
       emailError = "Please enter your email.";
    } else if (atPos == -1) {
-      emailError = "This doesn't look like a real email address.";
+      emailError = "This isn't a real email. You don't have an @.";
+   } // In the local-part of the email address, let's ensure the user has entered at least 3 unique characters
+   else if (uniqueCharacters.length < 3) {
+      emailError =
+         "This isn't a real email. You need at least 3 unique characters.";
    }
 
    if (emailError != "") {
@@ -459,7 +470,6 @@ $("#new-user-button").click(function () {
    var passwordInput = $("#new-password-input").val();
    var passwordLength = passwordInput.length;
    var passwordError = ""; // initialize this to no error
-   var emailLocalpart = emailInput.slice(0, atPos);
 
    if (passwordLength == 0) {
       // password is empty
@@ -468,7 +478,6 @@ $("#new-user-button").click(function () {
       // password is too short
       passwordError = "Your password must be at least 9 characters";
    }
-
    // The password cannot contain the local-part of the email address the user entered.
    // find the local part of the email address
    else if (passwordInput.indexOf(emailLocalpart) > -1) {
