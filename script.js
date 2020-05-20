@@ -432,7 +432,7 @@ $("#new-user-button").click(function () {
    var emailLength = emailInput.length;
    var emailLocalpart = emailInput.slice(0, atPos);
 
-   // find how many unique characgters are in the local part of the email
+   // find how many unique characters are in the local part of the email
    uniqueCharacters = "";
    for (let i in emailLocalpart) {
       console.log();
@@ -458,7 +458,7 @@ $("#new-user-button").click(function () {
       $("#new-email-error").removeClass("d-none"); // show the error message
       $("#new-email-input").addClass("text-danger border-danger"); // Style the email input to highlight the error
    } else {
-      // password is fine
+      // email is fine
       $("#new-email-error").addClass("d-none"); // hide the error message
       $("#new-email-input").removeClass("text-danger border-danger"); // remove the error style from input
    }
