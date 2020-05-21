@@ -431,6 +431,7 @@ $("#new-user-button").click(function () {
    var emailError = ""; // initialize this to no error
    var emailLength = emailInput.length;
    var emailLocalpart = emailInput.slice(0, atPos);
+   let emailPattern = /^[a-z0-9+]+@[a-z0-9+]+\.[a-z]{2,}/i; // set the regex pattern for valid emails
 
    // find how many unique characters are in the local part of the email
    uniqueCharacters = "";
@@ -443,9 +444,19 @@ $("#new-user-button").click(function () {
 
    if (emailLength == 0) {
       emailError = "Please enter your email.";
-   } else if (atPos == -1) {
-      emailError = "This isn't a real email. You don't have an @.";
-   } // In the local-part of the email address, let's ensure the user has entered at least 3 unique characters
+   } else if (emailPattern.test(emailInput) == false) {
+      // email must follow the following pattern:
+      // Starting with at least one alphanumeric character
+      // An @ character
+      // At least one alphanumeric character
+      // A . character
+      // Ending with at least 2 alphabetical characters
+      emailError = "Please enter a valid email address.";
+   }
+   // else if (atPos == -1) {
+   //    emailError = "This isn't a real email. You don't have an @.";
+   // }
+   // In the local-part of the email address, let's ensure the user has entered at least 3 unique characters
    else if (uniqueCharacters.length < 3) {
       emailError =
          "This isn't a real email. You need at least 3 unique characters.";
