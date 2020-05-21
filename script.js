@@ -648,3 +648,13 @@ $("#save-imagery").click(function () {
 
    console.log(submission);
 });
+
+$("#search-button").click(function () {
+   let searchFor = $("#search-for").val(); // grab the user input value
+   searchFor = searchFor.replace(/\W/g, " "); // Replace all non-alphabetical characters with spaces.
+   searchFor = searchFor.replace(/\s{2,}/g, " "); // All whitespace with 2 or more spaces should be converted to single spaces.
+   searchFor = searchFor.replace(/^\s+|\s+$/gi, ""); // Trim space at the beginning and end of the search string.
+   searchFor = searchFor.toLowerCase(); // Lowercase all characters.
+
+   console.log(searchFor);
+});
