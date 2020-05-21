@@ -466,12 +466,12 @@ $("#new-user-button").click(function () {
       // if there is an error, show it and display it
       console.log(emailError);
       $("#new-email-error").text(emailError); // place the error message
-      $("#new-email-error").removeClass("d-none"); // show the error message
-      $("#new-email-input").addClass("text-danger border-danger"); // Style the email input to highlight the error
+      $("#new-email-error").removeClass("d-none is-valid"); // show the error message
+      $("#new-email-input").addClass("is-invalid"); // Style the email input to highlight the error
    } else {
       // email is fine
-      $("#new-email-error").addClass("d-none"); // hide the error message
-      $("#new-email-input").removeClass("text-danger border-danger"); // remove the error style from input
+      $("#new-email-error").addClass("d-none is-valid"); // hide the error message
+      $("#new-email-input").removeClass("is-invalid"); // remove the error style from input
    }
 
    // end email checking
@@ -507,12 +507,12 @@ $("#new-user-button").click(function () {
       // if there is an error, show it and display it
       console.log(passwordError);
       $("#new-password-error").text(passwordError); // place the error message
-      $("#new-password-error").removeClass("d-none"); // show the error message
-      $("#new-password-input").addClass("text-danger border-danger"); // Style the email input to highlight the error
+      $("#new-password-error").removeClass("d-none is-valid"); // show the error message
+      $("#new-password-input").addClass("is-invalid"); // Style the email input to highlight the error
    } else {
       // password is fine
-      $("#new-password-error").addClass("d-none"); // hide the error message
-      $("#new-password-input").removeClass("text-danger border-danger"); // remove the error style from input
+      $("#new-password-error").addClass("d-none is-valid"); // hide the error message
+      $("#new-password-input").removeClass("is-invalid"); // remove the error style from input
    }
 
    // end password checking
